@@ -5,10 +5,28 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Contects Table View Controller-->
+        <!--View Controller-->
+        <scene sceneID="ybj-Mb-uEJ">
+            <objects>
+                <viewController id="VsM-0q-vgp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bqq-5N-5Zy"/>
+                        <viewControllerLayoutGuide type="bottom" id="lCG-xj-8Gs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qOf-G0-apx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ka-I4-51U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1895" y="-884"/>
+        </scene>
+        <!--Contacts Table View Controller-->
         <scene sceneID="mBO-y4-ftm">
             <objects>
-                <tableViewController id="kYf-TG-Tzz" customClass="ContectsTableViewController" customModule="ContectsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="kYf-TG-Tzz" customClass="ContactsTableViewController" customModule="ContectsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="RqU-2n-rxp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +39,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dreak Morwood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05w-Qe-AU9">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drake Morewood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05w-Qe-AU9">
                                             <rect key="frame" x="8" y="0.0" width="584" height="33"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -38,7 +56,7 @@
                                 <connections>
                                     <outlet property="name" destination="05w-Qe-AU9" id="2bw-er-bQK"/>
                                     <outlet property="number" destination="wPp-uc-GAh" id="ujZ-cG-rwM"/>
-                                    <segue destination="adV-hd-HCI" kind="show" id="qQ8-8O-wDN"/>
+                                    <segue destination="adV-hd-HCI" kind="show" identifier="openContact" id="aXi-Fs-KzY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -47,7 +65,16 @@
                             <outlet property="delegate" destination="kYf-TG-Tzz" id="uLj-Oa-3ni"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cwI-us-0xx"/>
+                    <navigationItem key="navigationItem" id="cwI-us-0xx">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="beF-d3-GiF">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k2n-y5-BxI">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="add"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEC-tj-rzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,7 +92,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCm-Br-GoP">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3L-i1-JJh">
+                                <rect key="frame" x="499" y="540" width="81" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWr-kx-Twc">
+                                <rect key="frame" x="10" y="528" width="95" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feA-JB-Asr">
+                                <rect key="frame" x="20" y="147" width="512" height="379"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drake Morewood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCm-Br-GoP">
                                 <rect key="frame" x="20" y="72" width="512" height="67"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -75,7 +120,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="fullName" destination="KCm-Br-GoP" id="lcX-VO-9Wf"/>
+                        <outlet property="details" destination="feA-JB-Asr" id="aJv-Qi-2WJ"/>
+                        <outlet property="fullName" destination="KCm-Br-GoP" id="aUh-Bt-0zs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2f-VN-IsM" userLabel="First Responder" sceneMemberID="firstResponder"/>

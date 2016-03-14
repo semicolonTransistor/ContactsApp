@@ -21,9 +21,9 @@ class Contact{
     
     func getName() -> String{
         if(lastNameFirst){
-            return firstName + " " + lastName
-        }else{
             return lastName + " " + firstName
+        }else{
+            return firstName + " " + lastName
         }
     }
 }
