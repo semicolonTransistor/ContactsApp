@@ -19,6 +19,7 @@ class ContactsTableViewController: UITableViewController {
         
         let moveButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("toggleEdit"))
         navigationItem.leftBarButtonItem = moveButton
+        tableView.reloadData();
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ContactCell
@@ -78,6 +79,11 @@ class ContactsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
+    }
+    
+    @IBAction func newContact(){
+        self.contacts.append(Contact(firstName: "new", lastName: "contact", number: ""))
+        tableView.reloadData()
     }
 
 

@@ -17,6 +17,7 @@
 		42E3A0901C8F0BFA00E44C2F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3A08F1C8F0BFA00E44C2F /* Contact.swift */; };
 		42E3A0921C8F173A00E44C2F /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3A0911C8F173A00E44C2F /* ContactCell.swift */; };
 		42E3A0941C8F1E0600E44C2F /* ContactDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3A0931C8F1E0600E44C2F /* ContactDetails.swift */; };
+		42F7B4FC1CCF933C00328FAF /* ContactsEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F7B4FB1CCF933C00328FAF /* ContactsEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		42E3A08F1C8F0BFA00E44C2F /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		42E3A0911C8F173A00E44C2F /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		42E3A0931C8F1E0600E44C2F /* ContactDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetails.swift; sourceTree = "<group>"; };
+		42F7B4FB1CCF933C00328FAF /* ContactsEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				42E3A0661C8F089400E44C2F /* Assets.xcassets */,
 				42E3A0681C8F089400E44C2F /* LaunchScreen.storyboard */,
 				42E3A06B1C8F089400E44C2F /* Info.plist */,
+				42F7B4FB1CCF933C00328FAF /* ContactsEditor.swift */,
 			);
 			path = ContectsApp;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				42E3A05E1C8F089400E44C2F /* AppDelegate.swift in Sources */,
 				42E3A08E1C8F09EE00E44C2F /* ContactsTableViewController.swift in Sources */,
 				42E3A0901C8F0BFA00E44C2F /* Contact.swift in Sources */,
+				42F7B4FC1CCF933C00328FAF /* ContactsEditor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +500,7 @@
 				42E3A0861C8F089500E44C2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42E3A0871C8F089500E44C2F /* Build configuration list for PBXNativeTarget "ContectsAppTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +509,7 @@
 				42E3A0891C8F089500E44C2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42E3A08A1C8F089500E44C2F /* Build configuration list for PBXNativeTarget "ContectsAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +518,7 @@
 				42E3A08C1C8F089500E44C2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

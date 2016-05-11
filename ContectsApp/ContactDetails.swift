@@ -17,9 +17,16 @@ class ContactDetails:UIViewController{
     override func viewDidLoad(){
         fullName.text = contact.getName()
         details.editable = false
-        var detailsString = "number: " + contact.number + "\n"
+        let detailsString = "number: " + contact.number + "\n"
         details.text = detailsString
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        if(segue.identifier == "edit"){
+            let contactEditor = segue.destinationViewController as! ContactEditor
+            contactEditor.contact = contact
+        }
     }
 
 }
