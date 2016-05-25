@@ -21,6 +21,11 @@ class ContactsTableViewController: UITableViewController {
         navigationItem.leftBarButtonItem = moveButton
         tableView.reloadData();
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ContactCell
         
@@ -32,7 +37,7 @@ class ContactsTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "openContact"){
-            let openContact = segue.destinationViewController as! ContactDetails
+            let openContact = segue.destinationViewController as! ContactEditor
             let cell = sender as! ContactCell
             openContact.contact = cell.contact
         }

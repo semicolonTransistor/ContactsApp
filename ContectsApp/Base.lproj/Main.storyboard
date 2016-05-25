@@ -8,6 +8,7 @@
         <!--Contact Editor-->
         <scene sceneID="ybj-Mb-uEJ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ka-I4-51U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="VsM-0q-vgp" customClass="ContactEditor" customModule="ContectsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bqq-5N-5Zy"/>
@@ -17,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9nx-Rn-j1H">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9nx-Rn-j1H">
                                 <rect key="frame" x="70" y="71" width="230" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxq-9i-fkw">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxq-9i-fkw">
                                 <rect key="frame" x="70" y="119" width="230" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -45,18 +46,11 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1U-6W-Yc8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1U-6W-Yc8">
                                 <rect key="frame" x="70" y="168" width="230" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWX-SR-4qc">
-                                <rect key="frame" x="168" y="206" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <segue destination="adV-hd-HCI" kind="show" identifier="save" id="qNK-5L-Om9"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -68,9 +62,8 @@
                         <outlet property="numberEditor" destination="H1U-6W-Yc8" id="1Hf-4p-iFS"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7ka-I4-51U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="-916"/>
+            <point key="canvasLocation" x="1699" y="-144"/>
         </scene>
         <!--Contacts Table View Controller-->
         <scene sceneID="mBO-y4-ftm">
@@ -105,7 +98,7 @@
                                 <connections>
                                     <outlet property="name" destination="05w-Qe-AU9" id="2bw-er-bQK"/>
                                     <outlet property="number" destination="wPp-uc-GAh" id="ujZ-cG-rwM"/>
-                                    <segue destination="adV-hd-HCI" kind="show" identifier="openContact" id="aXi-Fs-KzY"/>
+                                    <segue destination="VsM-0q-vgp" kind="show" identifier="openContact" id="Hkl-cx-g13"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -127,52 +120,6 @@
             </objects>
             <point key="canvasLocation" x="1184" y="-144"/>
         </scene>
-        <!--Contact Details-->
-        <scene sceneID="urP-Hi-kGv">
-            <objects>
-                <viewController id="adV-hd-HCI" customClass="ContactDetails" customModule="ContectsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3w9-4O-Pxd"/>
-                        <viewControllerLayoutGuide type="bottom" id="42M-vC-VIE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pqG-Lf-15y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feA-JB-Asr">
-                                <rect key="frame" x="20" y="147" width="512" height="379"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drake Morewood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCm-Br-GoP">
-                                <rect key="frame" x="20" y="72" width="512" height="67"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMg-ap-oSV">
-                                <rect key="frame" x="35" y="430" width="30" height="30"/>
-                                <state key="normal" title="Edit"/>
-                                <connections>
-                                    <segue destination="VsM-0q-vgp" kind="show" identifier="edit" id="le1-H8-q8z"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="details" destination="feA-JB-Asr" id="aJv-Qi-2WJ"/>
-                        <outlet property="fullName" destination="KCm-Br-GoP" id="aUh-Bt-0zs"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r2f-VN-IsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1903" y="-144"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Td9-3V-8bV">
             <objects>
@@ -193,7 +140,4 @@
             <point key="canvasLocation" x="372" y="-144"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="qNK-5L-Om9"/>
-    </inferredMetricsTieBreakers>
 </document>
